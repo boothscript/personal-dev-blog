@@ -1,8 +1,8 @@
 import ReactMarkdown from 'react-markdown';
 
 import { postSlugs, postForSlug } from '../../posts';
-import Layout from '../../components/Layout';
-import CodeBlock from '../../components/Codeblock';
+import Layout from '/../../components/Layout';
+import CodeBlock from '../../components/CodeBlock';
 
 export default function Post({ frontmatter, body }) {
   if (!frontmatter) return <></>;
