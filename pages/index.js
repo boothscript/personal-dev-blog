@@ -27,7 +27,7 @@ const PostsList = ({ posts }) => {
             >
               <Link href={`/blog/[post]`} as={`/blog/${slug}`}>
                 <a>
-                  <div className='text-2xl mb-1 font-large text-gray-100'>
+                  <div className='text-5xl mb-4 font-large text-gray-100'>
                     {title}
                   </div>
                   <p className='mb-2font-light mb-2'>{description}</p>
