@@ -6,7 +6,6 @@ import Layout from '../components/Layout';
 function Index({ posts }) {
   return (
     <Layout pageTitle='Stephen Booth'>
-      <h1>Blog Posts</h1>
       <PostsList posts={posts} />
     </Layout>
   );
@@ -24,13 +23,17 @@ const PostsList = ({ posts }) => {
           return (
             <li
               key={slug}
-              className='px-8 py-2 m-0 mt-4 border-b border-card-border hover:bg-gray-100'
+              className='px-8 py-2 m-0 mt-8 border-card-border hover:bg-gray-700'
             >
               <Link href={`/blog/[post]`} as={`/blog/${slug}`}>
                 <a>
-                  <div className='text-xl font-medium'>{title}</div>
-                  <p className='mt-2 mb-4 font-light'>{description}</p>
-                  <p className='text-small font-hairline'>{date}</p>
+                  <div className='text-2xl mb-1 font-large text-gray-100'>
+                    {title}
+                  </div>
+                  <p className='mb-2font-light mb-2'>{description}</p>
+                  <p className='text-small font-hairline text-gray-400'>
+                    {date}
+                  </p>
                 </a>
               </Link>
             </li>

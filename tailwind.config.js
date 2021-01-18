@@ -4,6 +4,21 @@ module.exports = {
     purgeLayersByDefault: true,
   },
   purge: ['./components/**/*.+(js|jsx)', './pages/**/*.+(js|jsx)'],
-  theme: {},
+  theme: {
+    extend: {
+      typography: {
+        DEFAULT: {
+          css: {
+            h1: {
+              color: '#F3F4F6',
+            },
+            h2: {
+              color: '#F3F4F6',
+            },
+          },
+        },
+      },
+    },
+  },
   plugins: [require('@tailwindcss/typography')],
 };

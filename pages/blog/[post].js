@@ -9,8 +9,8 @@ export default function Post({ frontmatter, body }) {
 
   return (
     <Layout pageTitle={frontmatter.title}>
-      <div className='w-full'>
-        <article className='prose max-w-none'>
+      <div className='w-full '>
+        <article className='prose max-w-none text-gray-200'>
           <h1>{frontmatter.title}</h1>
           <p className='italic'>{frontmatter.date}</p>
           <ReactMarkdown source={body} renderers={{ code: CodeBlock }} />
