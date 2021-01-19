@@ -26,7 +26,7 @@ After so many months of solo study and lockdowns, having a group to work with ha
 
 Watching others learn has been fascinating. It's made me think about the way I approach learning new topics. Following tutorials often gets you to a place with working code quickly, but I wonder if this just results in getting bogged down with syntax and platform idiosyncrasies instead of really getting to grips with understanding the topic you are focusing on.
 
-This week fellow students have often looked to reach for syntax to solve a problem rather than trying to understand the problem its self.
+This week fellow students have often looked to reach for syntax to solve a problem rather than trying to understand the problem itself.
 For example, often instead of stepping through the program mentally to find a bug, the initial reaction is to expect that they have used the wrong set of syntax characters. This may be a perfectly logical thing to do on week one, but it’s helped me see gaps in my own approaches to learning more advance topics.
 
 ## Having Existing Knowledge Gives a Whole Different Perspective
