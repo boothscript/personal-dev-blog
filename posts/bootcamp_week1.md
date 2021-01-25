@@ -1,8 +1,10 @@
 ---
-title: 'My Remote Bootcamp Experience: Week 1'
-description: 'My thoughts on the first week of classes at CodeNation'
+title: 'My Remote Bootcamp Experience: My First Week.'
+description: 'This week I started on a remote 3 month coding bootcamp with CodeNation.'
 date: 17 January 2021
 ---
+
+# My Remote Bootcamp Experience: My first week.
 
 This week I started on a remote 3 month coding bootcamp with CodeNation. I've been self teaching for 18 months but have struggled to complete a portfolio of professional projects without support. Being given the opportunity to attend through a government pilot scheme, this was something I couldn't turn down.
 
