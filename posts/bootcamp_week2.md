@@ -1,6 +1,6 @@
 ---
 title: 'My Remote Bootcamp Experience: What I learnt helping others learn CSS and HTML'
-description: 'In my second week of bootcamp we focused on HTML and CSS'
+description: 'In my second week of bootcamp we focused on HTML and CSS...'
 date: 25 January 2021
 ---
 

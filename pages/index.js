@@ -23,17 +23,17 @@ const PostsList = ({ posts }) => {
           return (
             <li
               key={slug}
-              className='px-8 py-2 m-0 mt-8 border-card-border hover:bg-gray-700'
+              className='group px-8 py-4 m-0 mt-8 border-card-border text-cream hover:bg-gray-800'
             >
               <Link href={`/blog/[post]`} as={`/blog/${slug}`}>
                 <a>
-                  <div className='text-5xl mb-4 font-large text-gray-100'>
+                  <h2 className='text-3xl  mb-4 font-bold tracking-wide leading-10 lg:text-5xl lg:leading-tight group-hover:text-primary'>
                     {title}
-                  </div>
-                  <p className='mb-2font-light mb-2'>{description}</p>
-                  <p className='text-small font-hairline text-gray-400'>
-                    {date}
+                  </h2>
+                  <p className='mb-4 font-light text-xl lg:text-2xl'>
+                    {description}
                   </p>
+                  <p className='text-small font-thin italic'>{date}</p>
                 </a>
               </Link>
             </li>

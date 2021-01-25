@@ -1,6 +1,6 @@
 ---
-title: 'My Remote Bootcamp Experience: My First Week.'
-description: 'This week I started on a remote 3 month coding bootcamp with CodeNation.'
+title: 'My Remote Bootcamp Experience: My First Week'
+description: 'This week I started on a remote 3 month coding bootcamp with CodeNation...'
 date: 17 January 2021
 ---
 
