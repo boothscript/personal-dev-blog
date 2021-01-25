@@ -5,6 +5,23 @@ module.exports = {
   presets: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    extend: {
+      typography: {
+        DEFAULT: {
+          css: {
+            h1: {
+              color: '#BCAF9C',
+            },
+            h2: {
+              color: '#BCAF9C',
+            },
+            h3: {
+              color: '#BCAF9C',
+            },
+          },
+        },
+      },
+    },
     screens: {
       sm: '640px',
       md: '768px',
