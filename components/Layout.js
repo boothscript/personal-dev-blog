@@ -21,7 +21,7 @@ function Layout({ children, pageTitle }) {
             <AppNav />
           </div>
         </header>
-        <main className='w-11/12 md:w-full max-w-2xl mx-auto my-8 flex-grow bg-gray-900 '>
+        <main className='w-11/12 md:w-full max-w-2xl mx-auto my-8 flex-grow bg-gray-900 font-sans'>
           {children}
         </main>
         <footer className='flex flex-col items-center w-full h-24 border-t border-green-200 text-gray-400'>
