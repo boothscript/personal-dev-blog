@@ -44,7 +44,7 @@ module.exports = {
       purple: colors.violet,
       pink: colors.pink,
       cream: '#BCAF9C',
-      primary: '#A491D3',
+      primary: '#38E2E5',
     },
     spacing: {
       px: '1px',
@@ -676,7 +676,7 @@ module.exports = {
       all: 'all',
       DEFAULT:
         'background-color, border-color, color, fill, stroke, opacity, box-shadow, transform',
-      colors: 'background-color, border-color, color, fill, stroke',
+      colors: 'background-color, border-color, color, fill, stroke font-size',
       opacity: 'opacity',
       shadow: 'box-shadow',
       transform: 'transform',
@@ -831,7 +831,7 @@ module.exports = {
     flexWrap: ['responsive'],
     float: ['responsive'],
     fontFamily: ['responsive'],
-    fontSize: ['responsive'],
+    fontSize: ['responsive', 'hover', 'group-hover'],
     fontSmoothing: ['responsive'],
     fontStyle: ['responsive'],
     fontVariantNumeric: ['responsive'],

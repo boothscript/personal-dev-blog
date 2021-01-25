@@ -11,10 +11,10 @@ function Layout({ children, pageTitle }) {
         <title>{pageTitle}</title>
       </Head>
       <div className='flex flex-col min-h-screen bg-gray-900 text-gray-400'>
-        <header className='w-full h-16 border-b border-green-200 flex items-center justify-center bg-gray-900'>
-          <div className='w-11/12 md:w-full max-w-2xl flex flex-row justify-between'>
+        <header className='w-full h-20 mt-10 flex  justify-center items-end bg-gray-900'>
+          <div className='w-11/12 md:w-full max-w-2xl flex flex-row justify-between items-end'>
             <Link href='/'>
-              <div className='text-2xl text-green-200 cursor-pointer'>
+              <div className='text-2xl text-primary cursor-pointer'>
                 Stephen Booth
               </div>
             </Link>
@@ -24,7 +24,7 @@ function Layout({ children, pageTitle }) {
         <main className='w-11/12 md:w-full max-w-2xl mx-auto my-8 flex-grow bg-gray-900 font-sans'>
           {children}
         </main>
-        <footer className='flex flex-col items-center w-full h-24 border-t border-green-200 text-gray-400'>
+        <footer className='flex flex-col items-center w-full h-24 border-t border-primary text-cream'>
           <div className='w-11/12 md:w-full max-w-3xl m-auto flex flex-row items-center justify-center'>
             <i>
               "Keep an open mind, but not so open that your brain falls out."
@@ -38,16 +38,18 @@ function Layout({ children, pageTitle }) {
 
 function AppNav() {
   return (
-    <nav className='text-2xl text-gray-200'>
-      <ActiveLink href='/' activeClassName='text-green-200'>
-        <span className='ml-4'>
-          <a className='hover:text-green-200 cursor-pointer'>Blog</a>
-        </span>
+    <nav className='group text-cream font-sans flex items-end'>
+      <ActiveLink href='/work' activeClassName='nav-active'>
+        <a className='nav-item'>work</a>
       </ActiveLink>
-      <ActiveLink href='/about' activeClassName='text-green-200'>
-        <span className='ml-6'>
-          <a className='hover:text-green-200 cursor-pointer'>About</a>
-        </span>
+      <ActiveLink href='/' activeClassName='nav-active'>
+        <a className='nav-item'>words</a>
+      </ActiveLink>
+      <ActiveLink href='/bio' activeClassName='nav-active'>
+        <a className='nav-item'>bio</a>
+      </ActiveLink>
+      <ActiveLink href='/about' activeClassName='nav-active'>
+        <a className='nav-item'>about</a>
       </ActiveLink>
     </nav>
   );
