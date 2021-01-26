@@ -14,6 +14,12 @@ const About = () => {
             light without looking arrogant. I am professional and would like a
             job please.
           </p>
+          <p>
+            Get in touch at{' '}
+            <a href='mailto:stephenboothdev@gmail.com'>
+              stephenboothdev@gmail.com
+            </a>
+          </p>
         </article>
       </div>
     </Layout>

@@ -11,6 +11,7 @@ module.exports = {
           css: {
             a: {
               color: '#BD928D',
+              '&:hover': { color: '#7FB3C7' },
             },
             h1: {
               color: '#BCAF9C',
@@ -50,7 +51,7 @@ module.exports = {
       purple: colors.violet,
       pink: colors.pink,
       cream: '#BCAF9C',
-      primary: '#62D7E4',
+      primary: '#7FB3C7',
     },
     spacing: {
       px: '1px',
