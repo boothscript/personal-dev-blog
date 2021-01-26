@@ -11,8 +11,9 @@ function ActiveLink({ href, activeClassName, children }) {
 
   if (router.pathname === href && activeClassName) {
     className = `${className} ${activeClassName}`.trim();
+  } else if (router.pathname.match(/\/blog\//) && href === '/') {
+    className = `${className} ${activeClassName}`.trim();
   }
-
   return <Link href={href}>{React.cloneElement(child, { className })}</Link>;
 }
 
