@@ -3,9 +3,9 @@ import Layout from '../components/Layout';
 
 const About = () => {
   return (
-    <Layout>
-      <div className='w-full mt-12'>
-        <article className='max-w-none prose text-gray-200 flex flex-col justify-around'>
+    <Layout pageTitle={'Stephen Booth - About'}>
+      <div className='w-full '>
+        <article className='prose prose-lg lg:prose-xl max-w-none text-cream'>
           <h1 className=''>
             Hi Im Steve, a web focused developer from the UK.
           </h1>

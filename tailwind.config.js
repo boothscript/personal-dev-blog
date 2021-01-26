@@ -9,6 +9,9 @@ module.exports = {
       typography: {
         DEFAULT: {
           css: {
+            a: {
+              color: '#BD928D',
+            },
             h1: {
               color: '#BCAF9C',
             },
@@ -17,6 +20,9 @@ module.exports = {
             },
             h3: {
               color: '#BCAF9C',
+            },
+            code: {
+              background: '#BCAF9C',
             },
           },
         },
@@ -44,7 +50,7 @@ module.exports = {
       purple: colors.violet,
       pink: colors.pink,
       cream: '#BCAF9C',
-      primary: '#38E2E5',
+      primary: '#62D7E4',
     },
     spacing: {
       px: '1px',

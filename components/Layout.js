@@ -14,9 +14,7 @@ function Layout({ children, pageTitle }) {
         <header className='w-full h-20 mt-10 flex  justify-center items-end bg-gray-900'>
           <div className='w-11/12 md:w-full max-w-2xl flex flex-row justify-between items-end'>
             <Link href='/'>
-              <div className='text-2xl text-primary cursor-pointer'>
-                Stephen Booth
-              </div>
+              <div className='text-5xl text-primary cursor-pointer'>SB</div>
             </Link>
             <AppNav />
           </div>
