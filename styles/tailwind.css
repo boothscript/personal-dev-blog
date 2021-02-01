@@ -11,4 +11,19 @@
   .nav-active {
     @apply text-primary text-5xl group-hover:text-lg;
   }
+  ul.mobile-menu-active {
+    @apply absolute h-screen w-screen bg-gray-900 md:bg-none md:flex;
+  }
+  ul.mobile-menu-active li {
+    @apply my-4;
+  }
+  ul.mobile-menu-active .nav-item {
+    @apply w-full text-5xl;
+  }
+  ul.mobile-menu-active .nav-item.nav-active {
+    @apply w-full text-5xl hover:text-5xl;
+  }
+  .mob-nav-item {
+    @apply text-5xl;
+  }
 }
