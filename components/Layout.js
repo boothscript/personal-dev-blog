@@ -2,7 +2,17 @@ import Head from 'next/head';
 import Link from 'next/link';
 import React, { useState } from 'react';
 
-import ActiveLink from './ActiveLink';
+import DesktopNav from './navigation/DesktopNav';
+import MobileNav from './navigation/MobileNav';
+import HamburgerBtn from './navigation/HamburgerBtn';
+
+// Navigation Links list of: [href, linkText]
+const navLinks = [
+  ['/work', 'work'],
+  ['/', 'words'],
+  ['/bio', 'bio'],
+  ['/about', 'about'],
+];
 
 function Layout({ children, pageTitle }) {
   // mobile nav state
@@ -10,6 +20,7 @@ function Layout({ children, pageTitle }) {
   const clickFunc = () => {
     setIsOpen(!isOpen);
   };
+  //  ---------------
 
   return (
     <>
@@ -26,8 +37,8 @@ function Layout({ children, pageTitle }) {
               </div>
             </Link>
             <HamburgerBtn isOpen={isOpen} clickFunc={() => clickFunc()} />
-            <AppNav />
-            <MobileNav isOpen={isOpen} />
+            <DesktopNav navLinks={navLinks} />
+            <MobileNav isOpen={isOpen} navLinks={navLinks} />
           </nav>
         </header>
         <main className='w-11/12 md:w-full max-w-2xl mx-auto my-8 flex-grow bg-gray-900 font-sans'>
@@ -42,76 +53,6 @@ function Layout({ children, pageTitle }) {
         </footer>
       </div>
     </>
-  );
-}
-
-function MobileNav({ isOpen }) {
-  return (
-    <div id='mobile-nav' className={`${isOpen && 'open'}`}>
-      <ul className=' h-full flex flex-col justify-center items-center text-cream font-sans'>
-        <li className='my-8 mx-8'>
-          <ActiveLink href='/work' activeClassName='nav-active'>
-            <a className='mob-nav-item'>work</a>
-          </ActiveLink>
-        </li>
-
-        <li className='my-8 mx-8'>
-          <ActiveLink href='/' activeClassName='nav-active'>
-            <a className='mob-nav-item'>words</a>
-          </ActiveLink>
-        </li>
-
-        <li className='my-8 mx-8'>
-          <ActiveLink href='/bio' activeClassName='nav-active'>
-            <a className='mob-nav-item'>bio</a>
-          </ActiveLink>
-        </li>
-
-        <li className='my-8 mx-8'>
-          <ActiveLink href='/about' activeClassName='nav-active'>
-            <a className='mob-nav-item'>about</a>
-          </ActiveLink>
-        </li>
-      </ul>
-    </div>
-  );
-}
-
-function AppNav() {
-  return (
-    <ul className=' hidden md:flex md:flex-row text-cream font-sans md:items-end'>
-      <li>
-        <ActiveLink href='/work' activeClassName='nav-active'>
-          <a className='nav-item'>work</a>
-        </ActiveLink>
-      </li>
-      <li>
-        <ActiveLink href='/' activeClassName='nav-active'>
-          <a className='nav-item'>words</a>
-        </ActiveLink>
-      </li>
-      <li>
-        <ActiveLink href='/bio' activeClassName='nav-active'>
-          <a className='nav-item'>bio</a>
-        </ActiveLink>
-      </li>
-      <li>
-        <ActiveLink href='/about' activeClassName='nav-active'>
-          <a className='nav-item'>about</a>
-        </ActiveLink>
-      </li>
-    </ul>
-  );
-}
-
-function HamburgerBtn({ isOpen, clickFunc }) {
-  const buttonState = isOpen ? 'open' : '';
-  return (
-    <button id='hamburger-btn' className='' onClick={() => clickFunc()}>
-      <div className={buttonState}></div>
-      <div className={buttonState}></div>
-      <div className={buttonState}></div>
-    </button>
   );
 }
 
