@@ -11,19 +11,31 @@
   .nav-active {
     @apply text-primary text-5xl group-hover:text-lg;
   }
-  ul.mobile-menu-active {
-    @apply absolute h-screen w-screen bg-gray-900 md:bg-none md:flex;
+  #mobile-nav {
+    @apply fixed top-0 left-full bg-gray-900 w-full h-screen transition duration-200;
   }
-  ul.mobile-menu-active li {
-    @apply my-4;
-  }
-  ul.mobile-menu-active .nav-item {
-    @apply w-full text-5xl;
-  }
-  ul.mobile-menu-active .nav-item.nav-active {
-    @apply w-full text-5xl hover:text-5xl;
+  #mobile-nav.open {
+    @apply transform -translate-x-full;
   }
   .mob-nav-item {
     @apply text-5xl;
+  }
+  #hamburger-btn {
+    @apply w-10 z-50 flex flex-col justify-around focus:outline-none;
+  }
+ 
+  #hamburger-btn div {
+    @apply h-1.5 w-full rounded bg-cream transition duration-300;
+  }
+
+  #hamburger-btn .open:nth-child(1) {
+    @apply transform rotate-45 scale-x-110 origin-left;
+  }
+  #hamburger-btn .open:nth-child(2) {
+    @apply opacity-0;
+  }
+
+  #hamburger-btn .open:nth-child(3) {
+    @apply transform -rotate-45 scale-x-110 origin-left;
   }
 }
