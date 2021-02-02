@@ -1,5 +1,5 @@
 import React from 'react';
-import ActiveLink from './ActiveLink';
+import ActiveLink from '../ActiveLink';
 
 export default function MobileNav({ isOpen, navLinks }) {
   return (
