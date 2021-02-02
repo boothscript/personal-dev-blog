@@ -21,9 +21,9 @@
     @apply text-5xl;
   }
   #hamburger-btn {
-    @apply w-10 z-50 flex flex-col justify-around focus:outline-none;
+    @apply w-10 z-50 md:hidden flex flex-col justify-around focus:outline-none;
   }
- 
+
   #hamburger-btn div {
     @apply h-1.5 w-full rounded bg-cream transition duration-300;
   }

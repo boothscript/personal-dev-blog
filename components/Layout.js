@@ -26,7 +26,7 @@ function Layout({ children, pageTitle }) {
               </div>
             </Link>
             <HamburgerBtn isOpen={isOpen} clickFunc={() => clickFunc()} />
-            {/* <AppNav /> */}
+            <AppNav />
             <MobileNav isOpen={isOpen} />
           </nav>
         </header>
@@ -47,7 +47,7 @@ function Layout({ children, pageTitle }) {
 
 function MobileNav({ isOpen }) {
   return (
-    <div id='mobile-nav' className={isOpen && 'open'}>
+    <div id='mobile-nav' className={`${isOpen && 'open'}`}>
       <ul className=' h-full flex flex-col justify-center items-center text-cream font-sans'>
         <li className='my-8 mx-8'>
           <ActiveLink href='/work' activeClassName='nav-active'>
@@ -79,7 +79,7 @@ function MobileNav({ isOpen }) {
 
 function AppNav() {
   return (
-    <ul className=' md:flex md:flex-row text-cream font-sans md:items-end'>
+    <ul className=' hidden md:flex md:flex-row text-cream font-sans md:items-end'>
       <li>
         <ActiveLink href='/work' activeClassName='nav-active'>
           <a className='nav-item'>work</a>
@@ -105,11 +105,12 @@ function AppNav() {
 }
 
 function HamburgerBtn({ isOpen, clickFunc }) {
+  const buttonState = isOpen ? 'open' : '';
   return (
     <button id='hamburger-btn' className='' onClick={() => clickFunc()}>
-      <div className={isOpen && 'open'}></div>
-      <div className={isOpen && 'open'}></div>
-      <div className={isOpen && 'open'}></div>
+      <div className={buttonState}></div>
+      <div className={buttonState}></div>
+      <div className={buttonState}></div>
     </button>
   );
 }
