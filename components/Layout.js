@@ -1,9 +1,27 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import React, { useState } from 'react';
 
-import ActiveLink from './ActiveLink';
+import DesktopNav from './navigation/DesktopNav';
+import MobileNav from './navigation/MobileNav';
+import HamburgerBtn from './navigation/HamburgerBtn';
+
+// Navigation Links list of: [href, linkText]
+const navLinks = [
+  ['/work', 'work'],
+  ['/', 'words'],
+  ['/bio', 'bio'],
+  ['/about', 'about'],
+];
 
 function Layout({ children, pageTitle }) {
+  // mobile nav state
+  const [isOpen, setIsOpen] = useState(false);
+  const clickFunc = () => {
+    setIsOpen(!isOpen);
+  };
+  //  ---------------
+
   return (
     <>
       <Head>
@@ -11,13 +29,17 @@ function Layout({ children, pageTitle }) {
         <title>{pageTitle}</title>
       </Head>
       <div className='flex flex-col min-h-screen bg-gray-900 text-gray-400'>
-        <header className='w-full h-20 mt-8  flex  justify-center items-end bg-gray-900'>
-          <div className='group w-11/12 md:w-full max-w-2xl flex flex-row justify-between items-stretch'>
+        <header className='w-full h-20 mt-8  flex  justify-center items-end bg-gray-900 '>
+          <nav className=' w-11/12 md:w-full max-w-2xl flex flex-row justify-between items-stretch'>
             <Link href='/'>
-              <div className='text-5xl text-primary cursor-pointer'>SB</div>
+              <div className='text-5xl z-50 text-primary cursor-pointer'>
+                SB
+              </div>
             </Link>
-            <AppNav />
-          </div>
+            <HamburgerBtn isOpen={isOpen} clickFunc={() => clickFunc()} />
+            <DesktopNav navLinks={navLinks} />
+            <MobileNav isOpen={isOpen} navLinks={navLinks} />
+          </nav>
         </header>
         <main className='w-11/12 md:w-full max-w-2xl mx-auto my-8 flex-grow bg-gray-900 font-sans'>
           {children}
@@ -31,25 +53,6 @@ function Layout({ children, pageTitle }) {
         </footer>
       </div>
     </>
-  );
-}
-
-function AppNav() {
-  return (
-    <nav className=' text-cream font-sans flex items-end '>
-      <ActiveLink href='/work' activeClassName='nav-active'>
-        <a className='nav-item'>work</a>
-      </ActiveLink>
-      <ActiveLink href='/' activeClassName='nav-active'>
-        <a className='nav-item'>words</a>
-      </ActiveLink>
-      <ActiveLink href='/bio' activeClassName='nav-active'>
-        <a className='nav-item'>bio</a>
-      </ActiveLink>
-      <ActiveLink href='/about' activeClassName='nav-active'>
-        <a className='nav-item'>about</a>
-      </ActiveLink>
-    </nav>
   );
 }
 

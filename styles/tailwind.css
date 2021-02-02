@@ -4,6 +4,7 @@
 
 @tailwind utilities;
 
+/* NAVIGATION CUSTOM CLASSES */
 @layer utilities {
   .nav-item {
     @apply mr-3 font-sans text-lg hover:text-5xl transition-all ease-in duration-300;
@@ -11,4 +12,32 @@
   .nav-active {
     @apply text-primary text-5xl group-hover:text-lg;
   }
+  #mobile-nav {
+    @apply fixed top-0 left-full bg-gray-900 w-full h-screen transition duration-200;
+  }
+  #mobile-nav.open {
+    @apply transform -translate-x-full;
+  }
+  .mob-nav-item {
+    @apply text-5xl;
+  }
+  #hamburger-btn {
+    @apply w-10 z-50 md:hidden flex flex-col justify-around focus:outline-none;
+  }
+
+  #hamburger-btn div {
+    @apply h-1.5 w-full rounded bg-cream transition duration-300;
+  }
+
+  #hamburger-btn .open:nth-child(1) {
+    @apply transform rotate-45 scale-x-110 origin-left;
+  }
+  #hamburger-btn .open:nth-child(2) {
+    @apply opacity-0;
+  }
+
+  #hamburger-btn .open:nth-child(3) {
+    @apply transform -rotate-45 scale-x-110 origin-left;
+  }
 }
+/* ---END OF NAVIGATION CUSTOM CLASSES--- */
