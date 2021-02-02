@@ -4,6 +4,7 @@
 
 @tailwind utilities;
 
+/* NAVIGATION CUSTOM CLASSES */
 @layer utilities {
   .nav-item {
     @apply mr-3 font-sans text-lg hover:text-5xl transition-all ease-in duration-300;
@@ -39,3 +40,4 @@
     @apply transform -rotate-45 scale-x-110 origin-left;
   }
 }
+/* ---END OF NAVIGATION CUSTOM CLASSES--- */
