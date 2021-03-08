@@ -6,13 +6,13 @@ After 6 weeks of intense learning, our cohort was split into small groups for ou
 
 As a group, we decided to breakdown the project into smaller components, and I suggested we used Figma as a tool to help us do this. Figma worked really well, I was quickly able to make a number of boards at different sizes and screen capture the necessary device renders with the firefox devtools. With Figma's multiplayer mode we we able to discuss the images together as a team without the hassle of having to bounce around each others discord streams, something we have be come far too aware of working remotely.
 
-We added a COMPONENTS column to our kanban board started to create cards. We then listed the visual elements needed for each card and discussed functionality. Figma gave us what we wanted to in terms of being able to talk about the higher level components together, however it lacked any interactivity information and as we started to look at the site on our own devices the complexity grew. To temper the increased scope we added a NICE TO HAVE column to our project board.
+We added a COMPONENTS column to our kanban board and started to create cards. We listed the visual elements needed for each card and discussed functionality. Figma gave us what we wanted to in terms of us being able to talk about the higher level components together, however it lacked any interactivity information and as we started to look at the site on our own devices the complexity grew. To temper the increased scope we added a NICE TO HAVE column to our project board.
 
 ## Adding CI/CD
 
 After a little success deploying a small react app using github actions I was keen to further extend my CI/CD knowledge with this project. I created two actions; one to deploy to github actions on a merge to main and a to run eslint on creating a PR request. This took longer than I anticipated as I tripped over issues with creating the workflows. Once the linting was working I decided to park the deployment for now to start working on the components.
 
-As the week went on, deployment was forgotten as other tasks took priority. This didn't really have too much of an impact on the project but in hindsight I wish I had got it running so that I could insure that new pull requests would pass the build step before being merge into main and that we all had one source of truth in regards to the visual aspects of our project.
+As the week went on, deployment was forgotten as other tasks took priority. This didn't really have too much of an impact on the project but in hindsight I wish I had got it running so that I could ensure that new pull requests would pass the build step before being allowed to merge into main and that we all had one source of truth in regards to the visual aspects of our project.
 
 ## Git Issues
 
@@ -26,8 +26,8 @@ While we were carful at the beginning of the week to set realistic expectations 
 
 As we went through the week our aim was to have everything done on our project board by thursday and by wednesday it looked like that was possible. However, by leaving some of the features that were proving difficult to implement and moving on to other tickets we had created a time bomb for ourselves.
 
-These little teaks soon piled up and as the more experienced of the group I tried to clear them. This also coincided with the other group members taking on extra functionality now the low hanging fruit had been completed.
+These little tweaks soon piled up and as the more experienced of the group I tried to clear them. This also coincided with the other group members taking on extra functionality now the low hanging fruit had been completed.
 
 A side effect of this was that they need more time from me to help them which slowed my progress at times.
 
-I am really proud of what we achieved together as a group but we did find the final day stressful, something I how to avoid in future projects.
+I am really proud of what we achieved together as a group but we did find the final day stressful, something I hope to improve on and avoid in future projects.
