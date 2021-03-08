@@ -1,3 +1,9 @@
+---
+title: "My Remote Bootcamp Experience: Twitter Clone Group Project"
+description: "TAfter 6 weeks of intense learning, our cohort was split into small groups for our first group project."
+date: 1 March 2021
+---
+
 # My Remote Bootcamp Experience: Twitter Clone Group Project
 
 After 6 weeks of intense learning, our cohort was split into small groups for our first group project. Our brief was short and vague; to build a twitter clone front end with a mobile first approach. We were expected to use git but the rest how we would manage the project was up too us as a team. This surprised me a little as learning more about project management was one of my key aims of the course. We were strongly encouraged to use kanban boards and issue tickets however.
