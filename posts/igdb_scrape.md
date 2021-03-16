@@ -1,23 +1,18 @@
 # Using Data from Twitch and Amazon to Populate a DB for a Video Game Review Site Project
 
-## intro
+For our latest group assignment we were tasked with creating a game review site in just 3 days. The vague brief and tight timeline were designed to give us a taste of the poorly defined projects often found in the "real world".
 
-For our latest group assignment we were tasked with creating a game review site in just 3 days. The vague brief and tight timeline were designed to give us a taste of the poorly defined projects that can be given to you as an engineer in the "real world".
+As the group began to write the specification for the full stack MERN app, it was clear we would need a good amount of dummy data to show the app in all of its glory when presentation time came along. As the shape of the data would infer the collection model as well as the front end components this was a high priority task which I took on. My plan was a simple one, to find an api that served up video game data and fetch a suitable enough amount of data fo us to use in our app. I estimated it would take me less than an hour to have the data ready to populate our db. I would soon learn that this was a gross underestimate.
 
-As the group specced out the full stack MERN app, it was clear we would need a good amount of dummy data to show the app in all of its glory when presentation time came along. As the shape of the data would **effect** the collection model as well as the front end components this was a high priority task which I took on. My plan was a simple one, to find an api that served up video game data and fetch a suitable enough amount of data fo us to use in our app. I estimated it would take me less than an hour to have the data ready to populate our db. I would soon learn that this was a gross underestimate.
-
-## signing up to idgb
-
-- chose twitch api as the license suited the project
-- getting client credentials proved difficult because of a silly mistake
+## Signing up to IGDB
 
 A quick google lead me to Twitch's video game database, IGDB. It ws a vast collection of titles and data and combined with a generous usage policy, I didn't look any further. In order to use the service I would need a Twitch account to generate a Client ID and a Client Secret.
 
-Unfortunately I made this a lot harder than it needed to be. When creating a Client Secret I was asked to provide an OAuth Redirect URL. It stated below the field that for local testing I could use `http://localhost` unfortunately when I copied and pasted the url I unknowingly included a leading space which resulting in the form validation telling me I couldn't use localhost as a url.
+Unfortunately I made this a lot harder than it needed to be. When creating a Client Secret I was asked to provide an OAuth Redirect URL. It stated below the field that for local testing I could use `http://localhost` but unfortunately when I copied and pasted the url I unknowingly included a leading space which resulting in the form validation telling me I couldn't use localhost as a url.
 
 After a good of hour of going round the houses on the twitch dev forums and even contemplating building the necessary endpoint I finally realized my mistake and could move on :-). I won't be making that mistake any time soon. Also note to future self: make sure you trim all whitespace before input validation.
 
-## getting auth token
+## Fetching an oAuth Token
 
 After finally getting my credentials, fetching an access token was much easier. I installed node-fetch and dotenev and added my `CLIENT_ID` and `CLIENT_SECRET` to my `.env`.
 
@@ -51,7 +46,7 @@ const getAuthToken = async () => {
 };
 ```
 
-## getting data from api
+## Getting Data from the API
 
 When starting to query the api, I made the mistake of assuming that this api would be like all the others I had previously come across. At the time of writing I now realized if I had just read the docs from the start I could of avoided a lot of head scratching.
 
@@ -108,6 +103,7 @@ After the data was pulled from api I rebuilt the each game object, pruning unnec
   )
 ```
 
+<!-- I don't think i need to include this...
 ```javascript
 // before (135 lines)
 {
@@ -295,9 +291,9 @@ After the data was pulled from api I rebuilt the each game object, pruning unnec
     ],
     "summary": "In a strange and mystical land, a young boy discovers a mysterious creature with which he forms a deep, unbreakable bond. The unlikely pair must rely on each other to journey through towering, treacherous ruins filled with unknown dangers. Experience the journey of a lifetime in this touching, emotional story of friendship and trust."
   },
-```
+``` -->
 
-## add the reviews
+## Adding Reviews
 
 When creating the components to leave a review, I wanted to add some review data purely for demo purposes. In reality reviews would be its own service with CRUD endpoints but due to time restrictions this wasn't possible.
 
@@ -323,11 +319,7 @@ const insertDummyReviews = () => {
 };
 ```
 
-## populating the db
-
-- created a schema
-- connect the db
-- **run**
+## Populating the Database
 
 With the data created all that was left to do was to populate the db. We were using Mongo Atlas to store the data and mongoose to connect to it. I was using mongoose and Atlas for the first time and they were both intuitive to use. After configuring the access options in Atlas I built a schema for the data.
 
@@ -352,12 +344,12 @@ module.exports = mongoose.model("games", Game);
 
 ## Conclusion
 
-This certainly isn't the first time I underestimated a task and the nature of the project did make me wonder if my time could be spent better else where. That being said that, once I was able to overcome the initial hurdles I was able to achieve my goals and learn something in the process. Knowing that apis can range in complexity will alow me to better estimate future tasks although as my experience grow I would like to think it would become less a problem.
+This certainly isn't the first time I underestimated a task and the nature of the project did make me wonder if my time could be spent better else where. That being said that, once I was able to overcome the initial hurdles I was able to achieve my goals and learn something in the process. Knowing that apis can range in complexity will alow me to better estimate future tasks although as my experience grows I would like to think it would become less a problem.
 
 Oh look, there I go again... Perhaps I haven't learned anything at all. 🤷‍♂️
 
 ```javascript
-// lib/dummyDataCreator.js
+// dummyDataCreator.js
 
 const fs = require("fs");
 const fetch = require("node-fetch");
@@ -445,5 +437,5 @@ const insertDummyReviews = () => {
   return reviewList;
 };
 
-module.exports = { getVideoGames, writeToFile };
+module.exports = { getVideoGame };
 ```
