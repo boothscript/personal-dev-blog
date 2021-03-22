@@ -10,7 +10,6 @@ import HamburgerBtn from './navigation/HamburgerBtn';
 const navLinks = [
   ['/work', 'work'],
   ['/', 'words'],
-  ['/bio', 'bio'],
   ['/about', 'about'],
 ];
 
