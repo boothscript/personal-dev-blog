@@ -2,6 +2,8 @@ import React from "react";
 import Layout from "../components/Layout";
 import Image from "next/image";
 import Link from "next/link";
+import SocialLink from "../components/SocialLink";
+import { GithubIcon } from "../components/Icons";
 
 const About = () => {
   return (
@@ -21,6 +23,14 @@ const About = () => {
           <h1 className="text-center">
             Hi Im Steve, a web focused developer from the UK.
           </h1>
+
+          <div className="flex justify-center items-center">
+            <SocialLink
+              Icon={GithubIcon}
+              text="GitHub"
+              href="http://github.com/boothscript"
+            />
+          </div>
 
           <h3>Why Tech?</h3>
           <p>
