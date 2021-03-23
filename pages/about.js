@@ -3,7 +3,7 @@ import Layout from "../components/Layout";
 import Image from "next/image";
 import Link from "next/link";
 import SocialLink from "../components/SocialLink";
-import { GithubIcon } from "../components/Icons";
+import { GithubIcon, LinkedinIcon, TwitterIcon } from "../components/Icons";
 
 const About = () => {
   return (
@@ -21,14 +21,24 @@ const About = () => {
             ></Image>
           </div>
           <h1 className="text-center">
-            Hi Im Steve, a web focused developer from the UK.
+            Hi I'm Steve, a web focused developer from the UK.
           </h1>
 
           <div className="flex justify-center items-center">
             <SocialLink
               Icon={GithubIcon}
-              text="GitHub"
-              href="http://github.com/boothscript"
+              text=""
+              href="https://github.com/boothscript"
+            />
+            <SocialLink
+              Icon={LinkedinIcon}
+              text=""
+              href="https://www.linkedin.com/in/stephen-booth-767638193"
+            />
+            <SocialLink
+              Icon={TwitterIcon}
+              text=""
+              href="https://www.linkedin.com/in/stephen-booth-767638193"
             />
           </div>
 
@@ -51,12 +61,10 @@ const About = () => {
           </p>
           <h3>Sounds Cool, So What Can You Do?</h3>
           <p>
-            Describe what coding you've done up to now. Include which
-            programming languages you have used and what projects you have been
-            working on. Since deciding to switch focus to a career in
-            technology, I started out learning python with a view to analysing
-            data. I learnt web scraping techniques as well as using libraries
-            such as pandas and matplotlib.
+            Since deciding to switch focus to a career in technology, I started
+            out learning python with a view to analysing data. I learnt web
+            scraping techniques as well as using libraries such as pandas and
+            matplotlib.
           </p>
           <p>
             As I started to build applications with flask, I realised that I
@@ -66,7 +74,7 @@ const About = () => {
             to checkout my <Link href="work/">projects</Link> or my{" "}
             <a href="https://github.com/boothscript">github</a>.
           </p>
-          <h3>Nice. But what makes you so special?</h3>
+          <h3>Nice. But What Makes You So Special?</h3>
           <p>
             Achieving my goals in my past music career was not easy. I made a
             lot of sacrifices and often faced times where it was easy to give
