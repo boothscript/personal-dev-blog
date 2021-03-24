@@ -7,6 +7,13 @@ module.exports = {
   theme: {
     extend: {
       typography: {
+        unprose: {
+          css: {
+            a: {
+              color: colors.gray[900],
+            },
+          },
+        },
         DEFAULT: {
           css: {
             a: {
