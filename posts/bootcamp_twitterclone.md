@@ -1,6 +1,6 @@
 ---
 title: "My Remote Bootcamp Experience: Twitter Clone Group Project"
-description: "TAfter 6 weeks of intense learning, our cohort was split into small groups for our first group project."
+description: "After 6 weeks of intense learning, our cohort was split into small groups for our first group project."
 date: 1 March 2021
 ---
 
