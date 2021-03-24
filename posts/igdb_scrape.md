@@ -1,3 +1,9 @@
+---
+title: "Using Data from Twitch and Amazon to Populate a DB for a Video Game Review Site Project"
+description: "For our latest group assignment we were tasked with creating a game review site in just 3 days."
+date: 20 March 2021
+---
+
 # Using Data from Twitch and Amazon to Populate a DB for a Video Game Review Site Project
 
 For our latest group assignment we were tasked with creating a game review site in just 3 days. The vague brief and tight timeline were designed to give us a taste of the poorly defined projects often found in the "real world".
@@ -76,7 +82,7 @@ fetch("https://api.igdb.com/v4/games", {
 
 As you can see, not every game has all fields meaning the second and third objects do not have a `rating` property.
 
-## wrangling the data
+## Wrangling the Data
 
 After the data was pulled from api I rebuilt the each game object, pruning unnecessary properties and editing others. Img urls were modified to point to the necessary optimized images. As not all fields were guaranteed to be returned, I used optional chaining when access the game properties.
 
@@ -102,196 +108,6 @@ After the data was pulled from api I rebuilt the each game object, pruning unnec
     })
   )
 ```
-
-<!-- I don't think i need to include this...
-```javascript
-// before (135 lines)
-{
-    "id": 117,
-    "cover": {
-      "id": 102434,
-      "url": "//images.igdb.com/igdb/image/upload/t_thumb/co271e.jpg"
-    },
-    "follows": 220,
-    "genres": [
-      {
-        "id": 8,
-        "name": "Platform"
-      },
-      {
-        "id": 9,
-        "name": "Puzzle"
-      },
-      {
-        "id": 31,
-        "name": "Adventure"
-      }
-    ],
-    "hypes": 63,
-    "involved_companies": [
-      {
-        "id": 36389,
-        "company": {
-          "id": 44,
-          "name": "Team Ico"
-        }
-      },
-      {
-        "id": 39363,
-        "company": {
-          "id": 10100,
-          "name": "Sony Interactive Entertainment"
-        }
-      },
-      {
-        "id": 51596,
-        "company": {
-          "id": 10692,
-          "name": "SIE Japan Studio"
-        }
-      },
-      {
-        "id": 51597,
-        "company": {
-          "id": 13071,
-          "name": "genDESIGN"
-        }
-      }
-    ],
-    "name": "The Last Guardian",
-    "rating": 84.3076635623741,
-    "release_dates": [
-      {
-        "id": 88630,
-        "category": 0,
-        "created_at": 1499040000,
-        "date": 1481068800,
-        "game": 117,
-        "human": "Dec 07, 2016",
-        "m": 12,
-        "platform": 48,
-        "region": 3,
-        "updated_at": 1499040000,
-        "y": 2016,
-        "checksum": "1e09e7a1-1a6a-e20b-b979-18c123c5ddff"
-      },
-      {
-        "id": 88631,
-        "category": 0,
-        "created_at": 1499040000,
-        "date": 1480982400,
-        "game": 117,
-        "human": "Dec 06, 2016",
-        "m": 12,
-        "platform": 48,
-        "region": 5,
-        "updated_at": 1499040000,
-        "y": 2016,
-        "checksum": "8ea8db7b-fd8a-67bb-05a0-62efb9700a4a"
-      },
-      {
-        "id": 106239,
-        "category": 0,
-        "created_at": 1501718400,
-        "date": 1481241600,
-        "game": 117,
-        "human": "Dec 09, 2016",
-        "m": 12,
-        "platform": 48,
-        "region": 1,
-        "updated_at": 1501804800,
-        "y": 2016,
-        "checksum": "1f0920c9-14a0-8ebd-b75c-dd0c5598126e"
-      },
-      {
-        "id": 106240,
-        "category": 0,
-        "created_at": 1501718400,
-        "date": 1480982400,
-        "game": 117,
-        "human": "Dec 06, 2016",
-        "m": 12,
-        "platform": 48,
-        "region": 2,
-        "updated_at": 1501804800,
-        "y": 2016,
-        "checksum": "8d53f2f7-68aa-3ba4-8052-04183d8032ab"
-      }
-    ],
-    "screenshots": [
-      {
-        "id": 10723,
-        "url": "//images.igdb.com/igdb/image/upload/t_thumb/bho8tfo2pdgujp4ttqt7.jpg"
-      },
-      {
-        "id": 10724,
-        "url": "//images.igdb.com/igdb/image/upload/t_thumb/cum87g1wfqatilogse9w.jpg"
-      },
-      {
-        "id": 10725,
-        "url": "//images.igdb.com/igdb/image/upload/t_thumb/areqpejmeyztpfljmvhe.jpg"
-      },
-      {
-        "id": 10726,
-        "url": "//images.igdb.com/igdb/image/upload/t_thumb/lfwn1xpd9sronyfh5mor.jpg"
-      },
-      {
-        "id": 10727,
-        "url": "//images.igdb.com/igdb/image/upload/t_thumb/r6u7mvvwsgclnp4dasba.jpg"
-      }
-    ],
-    "summary": "In a strange and mystical land, a young boy discovers a mysterious creature with which he forms a deep, unbreakable bond. The unlikely pair must rely on each other to journey through towering, treacherous ruins filled with unknown dangers. Experience the journey of a lifetime in this touching, emotional story of friendship and trust."
-  },
-```
-
-```javascript
-// after (44 lines)
-{
-    "id": 117,
-    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co271e.jpg",
-    "follows": 220,
-    "genres": [
-      "Platform",
-      "Puzzle",
-      "Adventure"
-    ],
-    "hypes": 63,
-    "involved_companies": [
-      "Team Ico",
-      "Sony Interactive Entertainment",
-      "SIE Japan Studio",
-      "genDESIGN"
-    ],
-    "name": "The Last Guardian",
-    "rating": 84.3076635623741,
-    "release_dates": [
-      {
-        "timestamp": 1481068800,
-        "human": "Dec 07, 2016"
-      },
-      {
-        "timestamp": 1480982400,
-        "human": "Dec 06, 2016"
-      },
-      {
-        "timestamp": 1481241600,
-        "human": "Dec 09, 2016"
-      },
-      {
-        "timestamp": 1480982400,
-        "human": "Dec 06, 2016"
-      }
-    ],
-    "screenshots": [
-      "https://images.igdb.com/igdb/image/upload/t_screenshot_big/bho8tfo2pdgujp4ttqt7.jpg",
-      "https://images.igdb.com/igdb/image/upload/t_screenshot_big/cum87g1wfqatilogse9w.jpg",
-      "https://images.igdb.com/igdb/image/upload/t_screenshot_big/areqpejmeyztpfljmvhe.jpg",
-      "https://images.igdb.com/igdb/image/upload/t_screenshot_big/lfwn1xpd9sronyfh5mor.jpg",
-      "https://images.igdb.com/igdb/image/upload/t_screenshot_big/r6u7mvvwsgclnp4dasba.jpg"
-    ],
-    "summary": "In a strange and mystical land, a young boy discovers a mysterious creature with which he forms a deep, unbreakable bond. The unlikely pair must rely on each other to journey through towering, treacherous ruins filled with unknown dangers. Experience the journey of a lifetime in this touching, emotional story of friendship and trust."
-  },
-``` -->
 
 ## Adding Reviews
 
