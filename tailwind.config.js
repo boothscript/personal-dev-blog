@@ -4,6 +4,10 @@ module.exports = {
   purge: [],
   presets: [],
   darkMode: false, // or 'media' or 'class'
+  images: {
+    loader: "cloudinary",
+    path: "https://res.cloudinary.com/ddwm5vtrp/",
+  },
   theme: {
     extend: {
       typography: {

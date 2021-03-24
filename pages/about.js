@@ -14,7 +14,7 @@ const About = () => {
             <Image
               id="profileImage"
               alt="Headshot of Stephen Booth"
-              src="/img/headshot.png"
+              src="image/upload/v1616573264/stephenboothprofile.png"
               width={300}
               height={300}
               className="rounded-full mx-w-md "
