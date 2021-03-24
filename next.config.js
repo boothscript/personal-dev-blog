@@ -1,7 +1,7 @@
 const nextConfig = {
   images: {
     loader: "cloudinary",
-    path: "https://res.cloudinary.com/ddwm5vtrp/",
+    path: "https://res.cloudinary.com/ddwm5vtrp/image/upload/",
   },
   target: "serverless",
   webpack: function (config) {
